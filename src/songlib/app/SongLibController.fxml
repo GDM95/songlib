@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="songlib.app.SongLibController">
+   <top>
+      <GridPane prefHeight="111.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="339.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="183.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="73.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="add" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="120.0" text="Add" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="edit" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="120.0" text="Edit" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="120.0" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="album" GridPane.rowIndex="3" />
+            <TextField fx:id="title" prefWidth="341.0" GridPane.rowIndex="1" />
+            <TextField fx:id="year" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="artist" prefWidth="185.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Song Title" textAlignment="CENTER" wrappingWidth="79.00390625">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Album" textAlignment="CENTER" wrappingWidth="58.923828125" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Artist" textAlignment="CENTER" wrappingWidth="48.16015625" GridPane.columnIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Year" textAlignment="RIGHT" wrappingWidth="36.08203125" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+		 </children>
+      </GridPane>
+   </top>
+   <center>
+      <ListView fx:id="listView" prefHeight="600.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <TextArea fx:id="console" prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

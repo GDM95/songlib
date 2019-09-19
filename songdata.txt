@@ -1,0 +1,4 @@
+133,Smashing Pumpkins,Siamese Dream,1992
+1979,Smashing Pumpkin,Siamese Dream,1992
+test,test,123,1992
+trst,test,12e1,1995
